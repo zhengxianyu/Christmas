@@ -834,10 +834,10 @@ body {
 .basket {
   position: absolute;
   background: #ab4444;
-  width: 7vw;
+  width: 6.8vw;
   height: 7vw;
   bottom: 4.5vw;
-  left: -1.5vw;
+  left: -1.3vw;
   border-radius: 1vw;
   transform: rotate(-5deg);
 }
