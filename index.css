@@ -88,9 +88,19 @@ body {
     transform: rotate(3deg);
     bottom: 0vw;
   }
+  50% {
+    left: 3vw;
+    transform: rotate(-3deg);
+    bottom: 0vw;
+  }
+  60% {
+    left: 5vw;
+    transform: rotate(1deg);
+    bottom: 0vw;
+  }
   100% {
     left: 19vw;
-    transform: rotate(-4deg);
+    transform: rotate(-6deg);
     bottom: 0.1vw;
   }
 }
