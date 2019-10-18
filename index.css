@@ -25,6 +25,76 @@ body {
   }
 }
 
+@keyframes FlameMove {
+  0% {
+    width: 1vw;
+    left: -4.5vw;
+  }
+  100% {
+    width: 1.5vw;
+    left: -5vw;
+  }
+}
+
+@keyframes SpeedMove {
+  0% {
+    width: 1vw;
+    left: 1.25vw;
+    top: 1vw;
+  }
+  33% {
+    width: 0.7vw;
+    top: 1.4vw;
+    left: 1.4vw;
+  }
+  66% {
+    width: 0.4vw;
+    left: 1.55vw;
+    top: 2vw;
+  }
+  100% {
+    width: 0.2vw;
+    left: 1.7vw;
+    top: 2.3vw;
+  }
+}
+
+@keyframes SpeedRightMove {
+  0% {
+    width: 1vw;
+    left: 5.76vw;
+    top: 1vw;
+  }
+  33% {
+    width: 0.7vw;
+    top: 1.4vw;
+    left: 5.9vw;
+  }
+  66% {
+    width: 0.4vw;
+    left: 6.05vw;
+    top: 2vw;
+  }
+  100% {
+    width: 0.2vw;
+    left: 6.2vw;
+    top: 2.3vw;
+  }
+}
+
+@keyframes SkateMove {
+  0% {
+    left: -14vw;
+    transform: rotate(3deg);
+    bottom: 0vw;
+  }
+  100% {
+    left: 19vw;
+    transform: rotate(-4deg);
+    bottom: 0.1vw;
+  }
+}
+
 .background {
   position: absolute;
   bottom: 5vw;
@@ -342,7 +412,7 @@ body {
 
 .lead {
   position: absolute;
-  bottom: 3vw;
+  bottom: 4vw;
 }
 
 .skate {
@@ -352,9 +422,10 @@ body {
   background: #ff77aa;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  left: 3vw;
-  box-shadow: -13px 4px 0px 0px #d85e93;
+  left: 2vw;
+  box-shadow: -0.5vw 0.23vw 0px 0px #d85e93;
   border-bottom-left-radius: 14px;
+  animation: SkateMove 10s linear infinite;
 }
 
 .skate:before {
@@ -375,7 +446,7 @@ body {
   position: absolute;
   background: #d85e93;
   width: 1.8vw;
-  height: 0.25vw;
+  height: 0.2vw;
   top: 0.25vw;
   left: -2.1vw;
   border-bottom-left-radius: 10px;
@@ -417,7 +488,7 @@ body {
   border-top: 0;
   top: -2.4vw;
   left: -0.6vw;
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
   width: 0.3vw;
 }
 
@@ -430,7 +501,7 @@ body {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   transform: rotate(-4deg);
-  bottom: 0.14vw;
+  bottom: 0.125vw;
 }
 
 .tail-right:before {
@@ -438,7 +509,7 @@ body {
   background: #d85e93;
   position: absolute;
   width: 2.9vw;
-  height: 0.25vw;
+  height: 0.2vw;
   left: -0.75vw;
   top: 0.44vw;
   transform: rotate(-2deg);
@@ -483,7 +554,7 @@ body {
   position: absolute;
   background: #998878;
   width: 0.5vw;
-  height: 2vw;
+  height: 1.7vw;
   bottom: -1.1vw;
   border-radius: 5vw;
   transform: rotate(-57deg);
@@ -492,4 +563,82 @@ body {
 
 .horn:before {
   content: '';
+  border-left: 1vw solid #998878;
+  width: 5vw;
+  height: 1vw;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.rocket {
+  width: 3vw;
+  height: 0.8vw;
+  background: #fff;
+  position: absolute;
+  left: -2.8vw;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: rotate(-1deg);
+  bottom: 1.4vw;
+}
+
+.rocket:before {
+  content: '';
+  position: absolute;
+  background: #dd4d2f;
+  width: 2.2vw;
+  height: 0.8vw;
+  left: -0.2vw;
+  border-radius: 0px;
+}
+
+.rocket:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0.15vw;
+  height: 0.8vw;
+  left: 1.5vw;
+}
+
+.tail-top {
+  position: absolute;
+  width: 0.3vw;
+  border-bottom: 0.6vw solid #ab4444;
+  border-right: 0.8vw solid transparent;
+  bottom: 2.1vw;
+  left: -3vw;
+}
+
+.tail-left {
+  position: absolute;
+  border-top: 0.5vw solid transparent;
+  border-bottom: 0.5vw solid transparent;
+  border-left: 0.6vw solid #ab4444;
+  left: -3.4vw;
+  bottom: 1.3vw;
+}
+
+.flame {
+  position: absolute;
+  background: linear-gradient(-90deg, #fdb847, transparent);
+  width: 1.5vw;
+  height: 0.8vw;
+  bottom: 1.4vw;
+  left: -5vw;
+  border-radius: 100%;
+  filter: blur(2px) contrast(62);
+  animation: FlameMove 0.3s infinite;
+}
+
+.speed-left, .speed-right {
+  position: absolute;
+  background: #63b5c3;
+  height: 0.1vw;
+  animation: SpeedMove 0.2s linear infinite;
+  animation-delay: 0.1s;
+}
+
+.speed-right {
+  animation: SpeedRightMove 0.2s linear infinite;
 }
