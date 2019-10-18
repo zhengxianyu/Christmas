@@ -800,8 +800,8 @@ body {
 .body {
   position: absolute;
   background: #dd4d2f;
-  width: 5vw;
-  height: 5vw;
+  width: 5.5vw;
+  height: 5.5vw;
   border-radius: 100%;
   border-top-left-radius: 50%;
   bottom: 4.3vw;
@@ -811,10 +811,76 @@ body {
 
 .tape {
   position: absolute;
-  width: 0.6vw;
-  height: 1vw;
+  width: 0.7vw;
+  height: 4.5vw;
   background: #fff;
-  top: 0.4vw;
-  transform: rotate(-31deg);
+  left: 2vw;
+  bottom: 1.6vw;
+  transform: rotate(-52deg);
   border-radius: 1vw;
+}
+
+.tape:before {
+  content: '';
+  position: absolute;
+  width: 6vw;
+  height: 2vw;
+  top: 2.3vw;
+  left: -3.5vw;
+  border-bottom: 0.6vw solid #fff;
+  border-radius: 100%;
+}
+
+.basket {
+  position: absolute;
+  background: #ab4444;
+  width: 7vw;
+  height: 7vw;
+  bottom: 4.5vw;
+  left: -1.5vw;
+  border-radius: 1vw;
+  transform: rotate(-5deg);
+}
+
+.basket:before {
+  content: '';
+  position: absolute;
+  width: 8.5vw;
+  height: 1.6vw;
+  background: #99ccdd;
+  left: -0.8vw;
+  border-radius: 1vw;
+}
+
+.line-left {
+  position: absolute;
+  background: #fdb747;
+  width: 3.5vw;
+  height: 0.5vw;
+  bottom: 7.5vw;
+  left: 2vw;
+  transform: rotate(-14deg);
+}
+
+.line-left:before {
+  content: '';
+  position: absolute;
+  border: 0.5vw solid #fdb747;
+  width: 0.2vw;
+  height: 0.2vw;
+  border-radius: 100%;
+  left: -1vw;
+  bottom: -0.3vw;
+}
+
+.line-left:after {
+  content: '';
+  position: absolute;
+  border-bottom: 0.5vw solid #fdb747;
+  width: 2.5vw;
+  height: 4vw;
+  border-radius: 6vw;
+  bottom: -0.4vw;
+  left: 1vw;
+  transform: rotate(-45deg);
 }

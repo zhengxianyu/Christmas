@@ -20,19 +20,4 @@ $(function () {
 
     document.getElementById('sky').appendChild(star);
   }
-
-  for (let index = 0; index < 5; index ++) {
-    let tape = document.createElement('div');
-    tape.className = 'tape';
-    tape.style =
-      'top: ' +
-        (index * 0.5) +
-      'vw; left: ' +
-        (1 + 0.5 * index) +
-      'vw; transform: rotate(' +
-        (-31 - index * 25) +
-      'deg)';
-    let clothes = document.getElementById('clothes');
-    clothes.appendChild(tape);
-  }
 })
