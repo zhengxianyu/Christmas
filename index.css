@@ -82,26 +82,26 @@ body {
   }
 }
 
-@keyframes SkateMove {
+@keyframes LeadMove {
   0% {
     left: -14vw;
     transform: rotate(3deg);
-    bottom: 0vw;
+    bottom: 4vw;
   }
   50% {
     left: 3vw;
     transform: rotate(-3deg);
-    bottom: 0vw;
+    bottom: 4vw;
   }
   60% {
     left: 4vw;
     transform: rotate(1deg);
-    bottom: 0vw;
+    bottom: 4vw;
   }
   100% {
     left: 19vw;
     transform: rotate(-6deg);
-    bottom: 0.1vw;
+    bottom: 4.1vw;
   }
 }
 
@@ -423,6 +423,7 @@ body {
 .lead {
   position: absolute;
   bottom: 4vw;
+  animation: LeadMove 8s linear infinite;
 }
 
 .skate {
@@ -435,7 +436,6 @@ body {
   left: 2vw;
   box-shadow: -0.5vw 0.23vw 0px 0px #d85e93;
   border-bottom-left-radius: 14px;
-  animation: SkateMove 10s linear infinite;
 }
 
 .skate:before {
@@ -651,4 +651,170 @@ body {
 
 .speed-right {
   animation: SpeedRightMove 0.2s linear infinite;
+}
+
+.shoes-left, .shoes-right {
+  position: absolute;
+  border-left: 0.2vw solid transparent;
+  border-right: 0.5vw solid transparent;
+  border-bottom: 0.7vw solid #56dddd;
+  width: 0.8vw;
+  bottom: 0;
+  left: 3vw;
+}
+
+.shoes-right {
+  border-left: 0.3vw solid transparent;
+  border-right: 0.8vw solid transparent;
+  left: 6.5vw;
+}
+
+.shoes-left:before {
+  content: '';
+  position: absolute;
+  background: #daf1f9;
+  width: 0.8vw;
+  height: 1vw;
+  top: 0.2vw;
+  left: 0.4vw;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.shoes-left:after, .shoes-right:after {
+  content: '';
+  position: absolute;
+  width: 1vw;
+  height: 0.1vw;
+  background: #daf1f9;
+  top: 0.6vw;
+  left: -0.1vw;
+}
+
+.shoes-left .ornament, .shoes-right .ornament {
+  position: absolute;
+  background: #ffba43;
+  width: 0.2vw;
+  height: 0.2vw;
+  top: 0.3vw;
+  left: 0.05vw;
+}
+
+.shoes-right:before {
+  content: '';
+  position: absolute;
+  border-left: 0.1vw solid transparent;
+  border-right: 0.6vw solid transparent;
+  border-bottom: 0.5vw solid #daf1f9;
+  left: 0.9vw;
+  top: 0.2vw;
+}
+
+.shoes-right:after {
+  left: -0.25vw;
+  width: 1.2vw;
+}
+
+.shoes-right .ornament {
+  width: 0.3vw;
+}
+
+.leg-left, .leg-right {
+  position: absolute;
+  height: 3vw;
+  width: 0.6vw;
+  background: #fff;
+  bottom: 0.2vw;
+  left: 4.25vw;
+  transform: rotate(40deg);
+  border-bottom-right-radius: 1vw;
+}
+
+.leg-right {
+  height: 2.8vw;
+  bottom: 0.3vw;
+  left: 7.37vw;
+  transform: rotate(28deg);
+}
+
+.leg-left:before, .leg-right:before,
+.leg-left:after, .leg-right:after {
+  content: '';
+  position: absolute;
+  background: #cc4440;
+  width: 0.6vw;
+  height: 0.1vw;
+  top: 0.6vw;
+}
+
+.leg-left:after, .leg-right:after {
+  background: #57dcdc;
+  top: 0.8vw;
+}
+
+.big-leg-left, .big-leg-right {
+  position: absolute;
+  height: 3vw;
+  width: 2.6vw;
+  left: 2.9vw;
+  bottom: 2vw;
+  border-right: 0.6vw solid #dd4d2f;
+  border-radius: 3vw;
+  transform: rotate(-3deg);
+}
+
+.big-leg-right {
+  left: 5.5vw;
+  bottom: 1.8vw;
+  border-right: 0.6vw solid #ab4444;
+  transform: rotate(-21deg);
+}
+
+.big-leg-right:before {
+  content: '';
+  position: absolute;
+  background: #ab4444;
+  width: 0.4vw;
+  height: 0.7vw;
+  left: 2.6vw;
+  top: 0.2vw;
+  transform: rotate(-14deg);
+}
+
+.trousers-corner .left, .trousers-corner .right {
+  position: absolute;
+  width: 1.2vw;
+  height: 0.6vw;
+  background: #cc4440;
+  left: 4.95vw;
+  bottom: 2.6vw;
+  border-radius: 1vw;
+  transform: rotate(26deg);
+}
+
+.trousers-corner .right {
+  left: 7.7vw;
+  transform: rotate(15deg);
+}
+
+.body {
+  position: absolute;
+  background: #dd4d2f;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 100%;
+  border-top-left-radius: 50%;
+  bottom: 4.3vw;
+  transform: rotate(45deg);
+  left: 4vw;
+}
+
+.tape {
+  position: absolute;
+  width: 0.6vw;
+  height: 1vw;
+  background: #fff;
+  top: 0.4vw;
+  transform: rotate(-31deg);
+  border-radius: 1vw;
 }
