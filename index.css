@@ -10,6 +10,81 @@ body {
   overflow: hidden;
 }
 
+@keyframes TrouserCornerLeftMove {
+  0% {
+    left: 4.95vw;
+    transform: rotate(26deg);
+  }
+  50% {
+    left: 5.3vw;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 4.95vw;
+    transform: rotate(26deg);
+  }
+}
+
+@keyframes HandRightMove {
+  0% {
+    transform: rotate(-43deg);
+  }
+  50% {
+    transform: rotate(-64deg);
+  }
+  100% {
+    transform: rotate(-43deg);
+  }
+}
+
+@keyframes ReflectiveMove {
+  0% {
+    left: 0;
+    height: 1.9vw;
+    bottom: 0vw;
+  }
+  50% {
+    left: -0.5vw;
+    height: 1.5vw;
+    bottom: 0.3vw;
+  }
+  100% {
+    left: -1.8vw;
+    height: 0.5vw;
+    bottom: 1vw;
+  }
+}
+
+@keyframes HandLeftMove {
+  0% {
+    transform: rotate(-43deg);
+  }
+  50% {
+    transform: rotate(-32deg);
+  }
+  100% {
+    transform: rotate(-43deg);
+  }
+}
+
+@keyframes LightMove {
+  0% {
+    height: 1.4vw;
+  left: -0.3vw;
+  top: 0.55vw;
+  }
+  50% {
+    height: 1vw;
+  left: -0.3vw;
+  top: 0.55vw;
+  }
+  100% {
+    height: 0.4vw;
+    left: -0.2vw;
+    top: 0.13vw;
+  }
+}
+
 @keyframes MoustacheTwoMove {
   0% {
     transform: rotate(102deg);
@@ -144,20 +219,47 @@ body {
     transform: rotate(3deg);
     bottom: 4vw;
   }
-  50% {
-    left: 3vw;
-    transform: rotate(-3deg);
+  20% {
+    left: -2vw;
+    transform: rotate(-5deg);
     bottom: 4vw;
   }
-  60% {
-    left: 4vw;
-    transform: rotate(1deg);
+  30% {
+    left: 2vw;
+    transform: rotate(4deg);
     bottom: 4vw;
   }
   100% {
     left: 19vw;
-    transform: rotate(-6deg);
+    transform: rotate(-20deg);
     bottom: 4.1vw;
+  }
+}
+
+@keyframes RollMove {
+  0% {
+    left: -2.5vw;
+  }
+  50% {
+    left: -2vw;
+  }
+  100% {
+    left: -2.5vw;
+  }
+}
+
+@keyframes HatMove {
+  0% {
+    bottom: -0.3vw;
+    transform: rotate(45deg);
+  }
+  50% {
+    bottom: -0.2vw;
+    transform: rotate(48deg);
+  }
+  100% {
+    bottom: -0.3vw;
+    transform: rotate(45deg);
   }
 }
 
@@ -786,6 +888,31 @@ body {
   border-bottom-right-radius: 1vw;
 }
 
+@keyframes LegLeftMove {
+  0% {
+    height: 3vw;
+    bottom: 0.2vw;
+    left: 4.25vw;
+    transform: rotate(40deg);
+  }
+  50% {
+    height: 3.5vw;
+    bottom: -0.1vw;
+    left: 4.5vw;
+    transform: rotate(47deg);
+  }
+  100% {
+    height: 3vw;
+    bottom: 0.2vw;
+    left: 4.25vw;
+    transform: rotate(40deg);
+  }
+}
+
+.leg-left {
+  animation: LegLeftMove 0.5s linear infinite;
+}
+
 .leg-right {
   height: 2.8vw;
   bottom: 0.3vw;
@@ -817,6 +944,29 @@ body {
   border-right: 0.6vw solid #dd4d2f;
   border-radius: 3vw;
   transform: rotate(-3deg);
+}
+
+@keyframes BigLegLeftMove {
+  0% {
+    left: 2.9vw;
+    transform: rotate(-3deg);
+  }
+  50% {
+    left: 3.2vw;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 2.9vw;
+    transform: rotate(-3deg);
+  }
+}
+
+.big-leg-left {
+  animation: BigLegLeftMove 0.5s linear infinite;
+}
+
+.trousers-corner .left {
+  animation: TrouserCornerLeftMove 0.5s linear infinite;
 }
 
 .big-leg-right {
@@ -963,12 +1113,17 @@ body {
   border-radius: 1vw;
 }
 
+.hand-left {
+  animation: HandLeftMove 2s linear infinite;
+}
+
 .hand-right {
   width: 0.6vw;
   height: 1.3vw;
   bottom: 7.4vw;
   left: 9.2vw;
   transform: rotate(-43deg);
+  animation: HandRightMove 2s linear infinite;
 }
 
 .hand-left:before, .hand-right:before {
@@ -1354,6 +1509,7 @@ body {
   left: -1vw;
   bottom: -0.3vw;
   transform: rotate(45deg);
+  animation: HatMove 2s linear infinite;
 }
 
 .red-hat-four {
@@ -1374,4 +1530,24 @@ body {
   height: 1.2vw;
   border-radius: 3vw;
   left: -2.5vw;
+  animation: RollMove 2s linear infinite;
+}
+
+.reflective-light {
+  position: absolute;
+  width: 0.2vw;
+  background: linear-gradient(45deg, #fff, transparent);
+  transform: rotate(40deg);
+  animation: ReflectiveMove 0.2s linear infinite;
+}
+
+.reflective-light:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0.15vw;
+  height: 1.4vw;
+  left: -0.3vw;
+  top: 0.55vw;
+  animation: LightMove 0.2s linear infinite;
 }
