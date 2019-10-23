@@ -1556,3 +1556,51 @@ body {
   top: 0.55vw;
   animation: LightMove 0.2s linear infinite;
 }
+
+.sky-snow {
+  position: absolute;
+  width: 12vw;
+  height: 2.2vw;
+  background: #fff;
+  left: 1.2vw;
+  top: 38px;
+  border-radius: 3vw;
+}
+
+.sky-snow-one, .sky-snow-two, .sky-snow-three,
+.sky-snow-four, .sky-snow-five {
+  position: absolute;
+  background: #fff;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 0.7vw;
+  border-radius: 3vw;
+  left: 0.9vw;
+  border-bottom: 0.15vw solid #999;
+}
+
+.sky-snow-two {
+  width: 3vw;
+  height: 3vw;
+  left: 3vw;
+  top: 1vw;
+}
+
+.sky-snow-three {
+  left: 5.5vw;
+  top: 1.5vw;
+  transform: rotate(-12deg);
+}
+
+.sky-snow-four {
+  left: 7.8vw;
+  top: 1vw;
+}
+
+.sky-snow-five {
+  width: 1.5vw;
+  height: 1.5vw;
+  top: 1.3vw;
+  left: 10vw;
+  transform: rotate(-22deg);
+}
